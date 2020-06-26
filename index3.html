@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+	<html lang="ru">
+		<head>
+			<title>BD</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="css/style.css">
+		</head>
+			
+		<body>
+			<header class="header">
+				<div class="header__name">Потребители</div>
+				<nav class="nav__item">	
+					<a href="index1.html" class="nav__name">Продукты</a>
+					<a href="index2.html" class="nav__name">Поставщики</a>
+					<a href="index3.html" class="nav__name">Потребители</a>	
+				</nav>
+			</header>
+
+			<div id="board-consumer" class="board-consumer"></div>
+
+			<button id="board-consumer-active" class="btn-new-consumer" onclick="addClassActive()">Добавить Потребителя</button>
+			<form id="form-consumer-active" class="form-consumer">
+				<p>Создадим нового потребителя</p>
+				<span class="span-consumer__address">address</span>
+				<input type="text" value="" class="btn-consumer__addres" id="btn-consumer__addres-id">
+				<span class="span-consumer__phone">phone</span>
+				<input type="text" value="" class="btn-consumer__phone" id="btn-consumer__phone-id">
+				<span class="span-consumer__bank">BankId</span>
+				<input type="text" value="" class="btn-consumer__bank" id="btn-consumer__bank-id">
+
+				
+				<button id="btn-finish-consumer-id" class="btn-finish-consumer" onclick="createConsumer();removeClassActive();">Готово</button>
+			</form>
+
+			<form id="form-consumer--update" class="form-consumer--update">
+				<p>Обновить данные потребителя</p>
+				<span class="span-consumer--update__id">id</span>
+				<input type="text" class="btn-consumer--update__id" id="btn-consumer--update__id-id">
+				<span class="span-consumer--update__address">address</span>
+				<input type="text" class="btn-consumer--update__address" id="btn-consumer--update__address-id">
+				<span class="span-consumer--update__phone">phone</span>
+				<input type="text" class="btn-consumer--update__phone" id="btn-consumer--update__phone-id">
+				<span class="span-consumer--update__bank">BankId</span>
+				<input type="text" class="btn-consumer--update__bank" id="btn-consumer--update__bank-id">
+
+				<button id="btn-consumer--finish-update-id" class="btn-consumer--finish-update" onclick="updateConsumer();removeUpdateClassActive()">Готово</button>
+			</form>
+
+			<script>
+				function stopDefAction(evt) {
+    				evt.preventDefault();
+				}
+				document.getElementById('btn-finish-consumer-id').addEventListener('click',stopDefAction, false )
+				document.getElementById('btn-consumer--finish-update-id').addEventListener('click',stopDefAction, false)
+				function addClassActive(){
+					document.getElementById('form-consumer-active').classList.add('active')
+				}
+				function removeClassActive(){
+					document.getElementById('form-consumer-active').classList.remove('active')
+				}
+				function removeUpdateClassActive(){
+					document.getElementById('form-consumer--update').classList.remove('active')
+				}
+			</script>
+
+			
+
+			
+
+			<!-- Consumer -->
+			<script src="js/Consumer/Consumer.js"></script>
+			<link rel="stylesheet" href="js/Consumer/Consumer.css">
+
+		</body>
+	</html>	

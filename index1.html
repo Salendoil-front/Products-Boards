@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+	<html lang="ru">
+		<head>
+			<title>BD</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="css/style.css">
+		</head>
+			
+		<body>
+			<header class="header">
+				<div class="header__name">Продукты</div>
+				<nav class="nav__item">	
+					<a href="index1.html" class="nav__name">Продукты</a>
+					<a href="index2.html" class="nav__name">Поставщики</a>
+					<a href="index3.html" class="nav__name">Потребители</a>	
+				</nav>
+			</header>
+
+			<div id="board-products" class="board-products">Продукты</div>
+
+			<button id="board-consumer-active" class="btn-new-consumer" onclick="addClassActive()">Добавить Продукт</button>
+			
+			<form id="form-product-active" class="form-product">
+				<span>Имя продукта:</span>
+				<input type="text" value="" class="btn-product__name" id="btn-product__name-id">
+				<span>Значение на складе:</span>
+				<input type="text" value="" class="btn-product__volume" id="btn-product__volume-id">
+				<span>Дата прибытия:</span>
+				<input type="text" value="" class="btn-product__arrive" id="btn-product__arrive-id">
+				<span>Дата отправки:</span>
+				<input type="text" value="" class="btn-product__departure" id="btn-product__departure-id">
+				<span>Информация поставщика</span>
+				<input type="text" value="" class="btn-product__supplier__id" id="btn-product__supplier__id-id">
+				<span>Информация потребителя</span>
+				<input type="text" value="" class="btn-product__consumer__id" id="btn-product__consumer__id-id">
+				<span>Статус отправки:</span>
+				<input type="text" value="" class="btn-product__arriving" id="btn-product__arriving-id">
+
+				<button id="btn-finish-consumer-id" class="btn-finish-consumer" onclick="createProduct();removeClassActive();">Готово</button>
+			</form>
+
+			<form id="form-product-update-id" class="form-product-update">
+				<span>Код продутка:</span>
+				<input type="text" class="btn-product-update__id" id="btn-product-update__id-id">
+				<span>Имя продутка:</span>
+				<input type="text" class="btn-product-update__name" id="btn-product-update__name-id">
+				<span>Значение на складе:</span>
+				<input type="text" class="btn-product-update__volume" id="btn-product-update__volume-id">
+				<span>Код прибытия:</span>
+				<input type="text" class="btn-product-update__arrive" id="btn-product-update__arrive-id">
+				<span>Код отправки:</span>
+				<input type="text" class="btn-product-update__departure" id="btn-product-update__departure-id">
+				<span>Код поставщика:</span>
+				<input type="text" class="btn-product-update__supplire" id="btn-product-update__supplier-id">
+				<span>Код потребителя:</span>
+				<input type="text" class="btn-product-update__comsumer" id="btn-product-update__consumer-id">
+				<span>Статус отправки:</span>
+				<input type="text" class="btn-product-update__arriving" id="btn-product-update__arriving-id">
+
+				<button id="btn-product-update-finish-id" class="btn-product-update-finish" onclick="updateProduct();removeClassActiveUpdate()">Готово</button>
+			</form>
+
+			<script>
+				function stopDefAction(evt) {
+    				evt.preventDefault();
+				}
+				document.getElementById('btn-finish-consumer-id').addEventListener('click', stopDefAction, false)
+				document.getElementById('btn-product-update-finish-id').addEventListener('click', stopDefAction, false)
+				function addClassActive(){
+					document.getElementById('form-product-active').classList.add('active')
+				}
+				function removeClassActive(){
+					document.getElementById('form-product-active').classList.remove('active')
+				}
+				function removeClassActiveUpdate(){
+					document.getElementById('form-product-update-id').classList.remove('active')
+				}
+			</script>
+			<!-- Products -->
+			<script src="js/Products/Products.js"></script>
+			<link rel="stylesheet" href="js/Products/Products.css">
+
+		</body>
+	</html>	

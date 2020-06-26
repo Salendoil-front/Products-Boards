@@ -1,0 +1,254 @@
+:root{
+	--linear-gradient: linear-gradient(to right, #e2f87c, #d6f567, #c8f151,#b9ee38,#a8eb12);
+	--down-gradient: linear-gradient(to top left, #18f4c8, #19c5a3, #137965, #0b5042 );
+
+	--box-shadow: 
+	0 16px 24px 2px rgba(33,37,41, .02),
+	0 6px 30px 5px rgba(33,37,41,.04)
+	0 8px 10px -5px rgba(33,37,41,.1);
+}
+
+*,*:after,*:before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.header{
+	width: 100%;
+	height: 50px;
+	background-image: var(--linear-gradient);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__name{
+	padding: 20px;
+	font-size: 20px;
+}
+
+.nav__item{
+	margin-right:60px;
+	
+}
+
+.nav__name{
+	padding: 0 20px;
+}
+
+.board-products{
+	margin-top: 50px;
+	width: 1400px;
+	height: 100%;
+	margin: 100px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.board-supplier{
+	margin-top: 50px;
+	width: 1400px;
+	height: 100%;
+	margin: 100px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.board-consumer{
+	margin-top: 50px;
+	width: 1400px;
+	height: 100%;
+	margin: 100px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+}
+	/* ФОрма для создания */
+.btn-new-consumer{
+	border-radius: 8px;
+	width: 250px;
+	height: 40px;
+	padding: 20px;
+	background-color: #000;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: fixed;
+	display: block;
+	right: 0;
+	bottom: 5%;
+	border-radius: 16px;
+	outline: none;
+}
+.form-consumer{
+	display: none;
+}
+
+.form-consumer.active{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: center;
+	align-items: center;
+	position: absolute;
+	top: 30%;
+	left: 35%;
+	width: 500px;
+	height: 300px;
+	background-color: #fff;
+	box-shadow:0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+	border-radius: 16px;
+	background-color: grey;
+}
+
+.form-consumer input{
+	width: 250px;
+	margin: 0 0 20px 0;
+	border-radius: 8px;
+	outline: none;
+}
+
+.form-consumer span:first-child{
+	margin-top: 20px;
+}
+
+.form-consumer span{
+	border: 2px solid #000;
+	border-radius: 8px;
+	padding: 7px;
+}
+
+
+
+.btn-finish-consumer{
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 200px;
+	height: 40px;
+	padding: 20px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+
+}
+
+
+/* форма для обновления */
+.form-consumer--update{
+	display: none;
+}
+
+.form-consumer--update.active{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	width: 500px;
+	height: 250px;
+	background-color: #fff;
+	box-shadow:0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+	
+	z-index: 1000;
+}
+
+.form-consumer--update input{
+	width: 250px;
+	margin: 0 0 20px 0;
+}
+
+.form-consumer--update span:first-child{
+	margin-top: 20px;
+}
+
+.btn-consumer--finish-update{
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 200px;
+	height: 40px;
+	padding: 20px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+
+}
+
+/* Форма для создания продукта */
+
+.form-product{
+	display: none;
+}
+
+.form-product.active{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	position: fixed;
+	top: 10%;
+	left: 35%;
+	width: 500px;
+	height: 400px;
+	background-color: #fff;
+	box-shadow:0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+	border-radius: 16px;
+
+}
+
+.form-product span{
+	margin: 5px 0;
+	border: 2px solid #000;
+	border-radius: 8px;
+	padding: 7px;
+}
+
+.form-product input{
+	width: 200px;
+	outline: none;
+	border-radius: 16px;
+	font-size: 18px;
+}
+
+
+/* ФОрма для обновления прокдукта */
+.form-product-update{
+	display: none;
+}
+
+.form-product-update.active{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: fixed;
+	top: 10%;
+	left: 35%;
+	width: 500px;
+	height: 400px;
+	background-color: #fff;
+	box-shadow:0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+}
+
+.btn-product-update-finish{
+	position: absolute;
+	bottom: 10px;
+	left: 43%;
+	padding: 7px;
+	border-radius: 7px;
+	background-color: #000;
+	color: #fff;
+	font-size: 18px;
+
+}

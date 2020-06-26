@@ -1,0 +1,42 @@
+.board-consumer__item{
+	width: 23%;
+	background-image: var(--down-gradient);
+	height: 200px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	position: relative;	
+	color: #fff;
+
+
+}
+
+.board-consumer__address{
+	margin: 30px 0;
+}
+
+
+.btn-consumer--delete{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 8px;
+	padding: 7px;
+	box-shadow: var(--box-shadow);
+	background-color: #c85560;
+	font-weight: bold;
+	color: #fff;
+}
+
+.btn-consumer--update{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	border-radius: 8px;
+	padding: 7px;
+	box-shadow: var(--box-shadow);
+	background-color: #d6f567;
+	font-weight: bold;
+
+}
+
+
